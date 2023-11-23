@@ -1,6 +1,6 @@
 class UnionFind():
     def __init__(self, n) -> None:
-        self.data = [-1]*n
+        self.data = [-1] * n
 
     def is_root(self, i) -> bool:
         return self.data[i] < 0
@@ -22,10 +22,10 @@ class UnionFind():
         if i != j:
             if self.tree_size(i) < self.tree_size(j):
                 i, j = j, i
-                self.data[i] += self.data[j]
-                self.data[j] = i
+            self.data[i] += self.data[j]
+            self.data[j] = i
 
         return i
-    
+
     def is_same(self, i, j) -> bool:
         return self.find_root(i) == self.find_root(j)
