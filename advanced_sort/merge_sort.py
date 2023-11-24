@@ -31,6 +31,7 @@ import math
 
 cnt = 0
 
+
 def merge(A, left, mid, right):
     global cnt
     n1 = mid - left
@@ -68,6 +69,7 @@ def merge_sort(A, left, right):
         merge_sort(A, mid, right)
 
         merge(A, left, mid, right)
+
 
 if __name__ == '__main__':
     N = int(input())
